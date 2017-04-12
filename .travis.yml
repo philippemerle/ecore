@@ -16,12 +16,12 @@ before_install:
 
 script:
 - cd clouddesigner/org.occiware.clouddesigner.parent
-- mvn clean verify
+- mvn clean verify -Pbuild.products
 
 # Actions to perform after the build.
 after_success:
 # TODO - mvn clean deploy --settings ${TRAVIS_BUILD_DIR}/travis/settings.xml 
-- mvn clean verify -Pbuild.products
+# TODO - mvn clean verify -Pbuild.products
 - cd ${TRAVIS_BUILD_DIR}
 - sh travis/tag_current_release.sh
 
