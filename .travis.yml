@@ -19,9 +19,9 @@ script:
 
 # Actions to perform after the build.
 after_success:
-- sh travis/deploy-maven-artifacts.sh
-- sh travis/build-products.sh
 - sh travis/tag_current_release.sh
+- sh travis/deploy-maven-artifacts.sh
+# - sh travis/build-products.sh
 
 deploy:
   provider: releases

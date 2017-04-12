@@ -9,7 +9,7 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
     if [ -z "$TRAVIS_TAG" ]; then
 
       cd clouddesigner/org.occiware.clouddesigner.parent
-      mvn clean deploy --settings ${TRAVIS_BUILD_DIR}/travis/settings.xml
+      mvn deploy --settings ${TRAVIS_BUILD_DIR}/travis/settings.xml
 
    fi
   fi

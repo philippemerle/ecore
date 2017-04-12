@@ -6,7 +6,7 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
   if [ -z "$TRAVIS_TAG" ]; then
 
     cd clouddesigner/org.occiware.clouddesigner.parent
-    mvn clean verify
+    mvn clean verify -Pbuild.products
 
   fi
 fi
