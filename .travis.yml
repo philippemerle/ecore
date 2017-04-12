@@ -30,9 +30,9 @@ deploy:
   api_key:
     secure: "GTOa4f1NJECOixNaeV2FHRHfIZ4q7Rrwla0JJ2pQSIAylbG5lkt5NVt/aqcrYZuzkFw7xY9HNVjS3loLgICcyeEQyeLKImn7gxtRtye9/9b/d6gX2Y3+kHO4wl77TdYmg6u5sudrrb9LSI5y9Ebx9dQJ4k9Cm8VdeagFioD0beFBplf3Gamdpm3sS5G/xO5LxLj8ks8mxFMu/N+7iKo0QIITdtAVyrAQKXZLzNmooDNFUlFXWL/CqYpwUHTdlOC0ILeWtvF2w69wbxIeE5wShMS/R5nDFi8Ewf2DNcYx0yNhfSAavCz9XLhTXEJHukf9Gmy1FD6WBV2dYTozWs7Z8g1cDEGt7QrW/rR+UiOf9mFwLJHeXuMCf2+UkE6nvSGs8fcjALX79FB8MHSiyGEa5dCKhPslx8fH/Ef/0jOM52n8pOww23KhUU9gZiNkvYwBdAxSioR4Ngk/ILPrrbTNMCc7OkAV55+X8odH8vhVoVY1NDPpQoDebD+M2q9iXuY2q1Bg3WpESvZVrDwQ+bcoDh513kd1ZgvFESIY+DPDTYSwXcs1EHKZm9aJFpyz0110wd8KcvtKeRLlV4mYt8qc+ovIUXAD2mZhVOmg2541tcVn1lwzr3eEdE3Wb/hwsGPrV/CeMrMkN5xs1DxMDYJ/cI3Ov/re91vvVCfHF3opMOc="
   file:
-  - clouddesigner/org.occiware.clouddesigner.product/target/products/org.occiware.clouddesigner.product-linux.gtk.x86_64.zip
-  - clouddesigner/org.occiware.clouddesigner.product/target/products/org.occiware.clouddesigner.product-macosx.cocoa.x86_64.zip
-  - clouddesigner/org.occiware.clouddesigner.product/target/products/org.occiware.clouddesigner.product-win32.win32.x86_64.zip
+    - "clouddesigner/org.occiware.clouddesigner.product/target/products/org.occiware.clouddesigner.product-linux.gtk.x86_64.zip"
+    - "clouddesigner/org.occiware.clouddesigner.product/target/products/org.occiware.clouddesigner.product-macosx.cocoa.x86_64.zip"
+    - "clouddesigner/org.occiware.clouddesigner.product/target/products/org.occiware.clouddesigner.product-win32.win32.x86_64.zip"
   skip_cleanup: true
   overwrite: true
   on:
@@ -43,9 +43,9 @@ env:
   global:
   - secure: Lp/h2cwzh5j6iT7OBmKmg8WUFnY7WWTj9X9/nvqiV8B92wW1I4LOc97RWpzidR7hBk/Z0NtHUuVd8Djd5WBEN5BKJ9Bchrpx9JBnb0hmdD45YhBIm4G8R3bctbg6Q2xDM8RbaTv/uwUl7/sE+9BFv+oIEOZ4s01yzIEutwGeKyA=
   - secure: L/K7jwoNcRw+38eTYq6US8jCNZdCFWFgF4mOsy6/sMMt/14KdZBe7bXKwfm5j9ZuqlPaiKPNPIFfI2isG4wGenXbNgODsE6qZPglyAAxSOwivKDBQtC3Uqqwuh6ZtmBuATg9ZNLAb1Dw3Stz2ipMTRSbYzImx4QB7/6QteSaaZk=
-  secure: "FcUNrmeMJmCJEumPPcIIRYpSUhxyilLId/2Sq59uLW5AtWMe9hwR4GgikEK927e0L/P8UU23Z4Sa3imwVDM5SM35lwu+kn4BpufWL5lpTIJylKmeZfBjtgIC0Tw65Q2Wy8kiNtQetyJCjqv8JNH7jxB6noHAL1nrLziv39zHJyAMWaw34/4LBNyR66/X+Z1Zd8t9aw5i7JcsSN4b1leS08TSE/mfCJaS05lQGAo+nCugs72zzAV2e39Q7v3C/roK+bmAVMPo7XA6Y9CcSK8a+2uLU2W26St3UXV2m7YP3tE45CD3tBaz4+84hog8X3ad6H82O9Q5qj5yXB4RA5OQnHoyek9WedgY6BEP9tnjta8LpGAOW2S/XDnO/kjXJ05e8Byt5Juz3dY3oAn9aWG+Cp5uv5do+DeBB4AMOuuh8xmYnvOwYnkgjuzowZc/lxswtYwkN5/fCsPqY3OppReydJc7bdEPJuqMCCL5y5VH9hm9G5tA3xTe+MZqLJBsXShjV4tyfFq/jFthkRyIpGIPNRO8iHarB4dYzjaiM1d/cRVxRQhApOeSMU000NmJBcGgIyLtmyMBGvwlCtKJTHjATrbVzXduL0S0jJfNW7R2nzNO6DVjKiH94FvgrsZvC/q4i9YhtSZ5WANh1lmeXRSWsFqd0cSgaXSvNGvtw2CgZww="
+  - secure: "FcUNrmeMJmCJEumPPcIIRYpSUhxyilLId/2Sq59uLW5AtWMe9hwR4GgikEK927e0L/P8UU23Z4Sa3imwVDM5SM35lwu+kn4BpufWL5lpTIJylKmeZfBjtgIC0Tw65Q2Wy8kiNtQetyJCjqv8JNH7jxB6noHAL1nrLziv39zHJyAMWaw34/4LBNyR66/X+Z1Zd8t9aw5i7JcsSN4b1leS08TSE/mfCJaS05lQGAo+nCugs72zzAV2e39Q7v3C/roK+bmAVMPo7XA6Y9CcSK8a+2uLU2W26St3UXV2m7YP3tE45CD3tBaz4+84hog8X3ad6H82O9Q5qj5yXB4RA5OQnHoyek9WedgY6BEP9tnjta8LpGAOW2S/XDnO/kjXJ05e8Byt5Juz3dY3oAn9aWG+Cp5uv5do+DeBB4AMOuuh8xmYnvOwYnkgjuzowZc/lxswtYwkN5/fCsPqY3OppReydJc7bdEPJuqMCCL5y5VH9hm9G5tA3xTe+MZqLJBsXShjV4tyfFq/jFthkRyIpGIPNRO8iHarB4dYzjaiM1d/cRVxRQhApOeSMU000NmJBcGgIyLtmyMBGvwlCtKJTHjATrbVzXduL0S0jJfNW7R2nzNO6DVjKiH94FvgrsZvC/q4i9YhtSZ5WANh1lmeXRSWsFqd0cSgaXSvNGvtw2CgZww="
 
 cache:
   directories:
-- $HOME/.m2
+  - $HOME/.m2
 
