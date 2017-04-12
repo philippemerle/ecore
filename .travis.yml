@@ -14,13 +14,16 @@ install: true
 before_install:
 - echo "MAVEN_OPTS='-Xmx2048m -XX:MaxPermSize=512m'" > ~/.mavenrc
 
+cache:
+  directories:
+  - $HOME/.m2
+
 script:
 - sh travis/build.sh
 
 # Actions to perform after the build.
 after_success:
 - sh travis/tag_current_release.sh
-- sh travis/deploy-maven-artifacts.sh
 # - sh travis/build-products.sh
 
 deploy:
@@ -37,13 +40,12 @@ deploy:
     branch : master
     repo: philippemerle/ecore
 
+after_deploy:
+- sh travis/deploy-maven-artifacts.sh
+
 env:
   global:
   - secure: "SsswN3x8mDy1w1x0i3uyTbFs+Tnf47zX94SbxPff94QdtJXebICVqUbqQAuneSzSGbaqEWjhlXc6xPx1QSxs33tA2gSTM5tq3dAcYbJAArlTD2Uw6m6lJTFj8jJ2VX2693/N5Q2lobl14VYly1/5txLPvFVeqrOu1/JcT4RPdCSLrUBL+EVkcjum86RnzDvlokPnq2A3YlZj1hZnvl4uY2qw1yQX/0LdYCACUHWt2uNf4V87fffg7q18bW/VACkM9gVzEhji3m7I0UM7n13ERapdMzOMraiGHWZhoQgtRJdXiSESN8+Lx7mq8hMLXU6xLZZJ2wJEiMLd0GF9yNYVNIAt2PrjXh86R4/SX6zK4LO3qtvCKymnZ12UvBmOiu8SPdfAbn0B4SbFlfs550ggSvteJ5lOyowo/D3K2YFq/btBQjHrZoezsTr/DHxQs7K1IUR8yAv8di5wpFkW0venc6p8hN0DqD39pLGV7VF+v5JEh2Fv7trhSoYErikYZMDG00dLPVZSy/OAZspw3e87Nm9X3pdm2nxt17arlYOv9+AWet3AwUugs+n+w73kn2wCNOv8eVEO3H2SaZqR9Y4oOx55IdBGKMgl4Ys+SsxkwR17+L/6/6png/He4ZlLq0eIT6YYO6z7/rghgkVy+SsmP+kcBgc8B2DgI+RCtyJftT0="
   - secure: "a/AiSAQw609BbjsaXvr5OObBqVre3yb8YJDGQ9sGTAdDomZkru0/piF2s5n77CIAk3GiVFb85ssnuKGlvOtxhal6m4lTcUgBZsVkCz8icYe8vBHfRa5WfSZ3jakCUZzvHQIwRcwdIL4k08mWpmmIDY3YK2flNz3H8qID/vHrIbxafcKTLQVGa/+jGJ5Km9VxoOJn7Z650DTNmzieiWpqhPLd1H0b2XaeBbtyhXP07pODXFlP82m/inKLj5XJJE/n8k6T76t1wOLF3LeWqPCYUZHB3ArEfFbrRqC+3oKd5SBsDBKsqD5Z4IokmAHUytl4FSkZprAhJKjML7se0i9jn+ZNXnrzpysPDPyIEmd/K147QQmSFLz4DDi7XhraPMVg7o7/BQ7bNRKNzIl85UAZda+yv+umR8iWOlCSrO/Rpgu0BN/Q1JZfP9UP55fRLej7fDqPGk0t1cNgTemyGLraMfBADNsrt+Hz1u/iqtm4dro1m9+QtXYu4QE4llyjWJ++QoSAtmXjpQeua7alxP4iNO22mkRVUNi04eydnv0oq9iKPiDoOzu/opfrYu2fybT4cMKhfnSEj+Wdq799r8IxzuADnAF8YE9RQDfr9Un4Qklc8gmLU9mBANGcnTQzfx+ocsi29XoSxbN1ZTRJp8Bu2lyW1QhfYrGs2xWa/UewMgE="
   - secure: "i29DNm7iFjDFYRmUppse6+jAE3rNLkHRSGYbH3QwdB7+SpJvjYYRVY8ftUHnwsAYT6+yxTJ5TmAvv6aVqKLtehYrhX5jbZGfgACBFFkav88pUpETMli0Fb3IZ0RNQLzQ4Preo2c9DEnsypum0RhAaPB4rrP3iXxqtj5ndsYwzztx/KLfJ2AC7Rif+eqa6MroaEq/nlsT9suJ93QfIAQts8r0jX7sBowN7D0iobUZ/Fv/dEkjRVxC5RRkzqXdh2Dh+p+kPsHDQ+J6UuOd9omMCFjxrCEgPgimyA8PhcqlTehTK9fpMMkohkThIvjSJw4pvYAFRiJYWfsqX6aWC3lWX2Os5avpsMP2pP+v5LYPL/j5kOp8BqumR4jqw248+kGBJVR4yqAF5yRhkDZKPjhdYcu/SopwmRuSMa6jGWMCDvrEC4KQgPgR60d2n5sRZ9rppL1f1SUdmF+2g/N2s5uH/AwInambVT7SQJwRwl1cyYucWyqhVPGKi+JHpJ1sdUhbLJFzstqsQC4jSidBQyjvUDffYW13OJtB/5JWzK0BoGoS9XP1cqoKpnBWb+hdUH+MfeGOdKiVh5whMXE+adcxyVdeLcQD9/Gqfhj9MgOkPiBL6L6dBHNI/6QKTgOAAJgQTvj824kkO7eBucSgQqn22S+4aAWzco/MB5WOt8n6r5w="
-
-cache:
-  directories:
-  - $HOME/.m2
 
