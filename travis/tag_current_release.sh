@@ -15,7 +15,7 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
 
       # Add tag and push to master.
       git tag -f current -m "Tagged from TravisCI for build $TRAVIS_BUILD_NUMBER"
-      git push -f --tags https://${GIT_TOKEN}@github.com/philippemerle/ecore 1> /dev/null 2> /dev/null 
+      git push -f --tags https://${GIT_TOKEN}@github.com/philippemerle/ecore # 1> /dev/null 2> /dev/null 
 
       echo "Done tag current release."
     fi
